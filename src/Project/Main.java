@@ -6,13 +6,17 @@ public class Main {
     public Main() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         startProgram();
     }
 
-    public static void startProgram() {
+    public static void startProgram()
+    {
         int restart = 1;
-        while(restart == 1) {
+
+        while(restart == 1)
+        {
             int value = checkCardValue();
             int suit = checkCardSuit();
 
@@ -24,28 +28,34 @@ public class Main {
 
     }
 
-    public static int checkCardValue() {
+    public static int checkCardValue()
+    {
         int value = readInt("'n' card's value from 6 to 14 ");
 
-        for(Scanner scanner = new Scanner(System.in); value < 6 || value > 14; value = scanner.nextInt()) {
+        for(Scanner scanner = new Scanner(System.in); value < 6 || value > 14; value = scanner.nextInt())
+        {
             System.out.println("enter another number 'n'");
         }
 
         return value;
     }
 
-    public static int checkCardSuit() {
+    public static int checkCardSuit()
+    {
         int suit = readInt("'m' card's suit from 1 to 4 ");
 
-        for(Scanner scanner = new Scanner(System.in); suit < 1 || suit > 4; suit = scanner.nextInt()) {
+        for(Scanner scanner = new Scanner(System.in); suit < 1 || suit > 4; suit = scanner.nextInt())
+        {
             System.out.println("enter another number 'm'");
         }
 
         return suit;
     }
 
-    static void findCardValue(int value) {
-        switch(value) {
+    static void findCardValue(int value)
+    {
+        switch(value)
+        {
             case 6:
                 System.out.print("шестёрка");
                 break;
@@ -76,8 +86,10 @@ public class Main {
 
     }
 
-    static void findCardSuit(int suit) {
-        switch(suit) {
+    static void findCardSuit(int suit)
+    {
+        switch(suit)
+        {
             case 1:
                 System.out.println(" пик");
                 break;
@@ -93,7 +105,8 @@ public class Main {
 
     }
 
-    public static int readInt(String name) {
+    public static int readInt(String name)
+    {
         System.out.printf("Input number %s ", name);
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
